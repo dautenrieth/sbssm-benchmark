@@ -1,0 +1,20 @@
+{
+    "distributions": [
+      {
+        "type": "norm",
+        "loc": 5,
+        "scale": 2
+      },
+      {
+        "type": "uniform",
+        "loc": 0,
+        "scale": 10
+      },
+      {
+        "type": "weibull_min",
+        "c": 1.5,
+        "scale": 3.0
+      }
+    ]
+  }
+  
