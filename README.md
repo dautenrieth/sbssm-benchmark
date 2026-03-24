@@ -14,24 +14,24 @@ It is organised into three independent but interoperable components:
 ## Architecture Overview
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│                    criticality_spaces/                       │
-│   JSON space definitions  →  Space  →  Metrics & Plots       │
-│   (Spaces/generated_spaces/)   ↑                            │
+┌─────────────────────────────────────────────────────────────┐
+│                    criticality_spaces/                      │
+│   JSON space definitions  →  Space  →  Metrics & Plots      │
+│                                ↑                            │
 └────────────────────────────────┼────────────────────────────┘
                                  │  Space instance shared via API
 ┌────────────────────────────────┼────────────────────────────┐
-│              scenario_selection_methods/                     │
+│              scenario_selection_methods/                    │
 │   Selector (e.g. GPR, IPSO, ANN) calls                      │
-│   space.get_values_for_points(samples)                       │
-│   space.metrics.run_metrics_suite(...)                       │
-└──────────────────────────────────────────────────────────────┘
+│   space.get_values_for_points(samples)                      │
+│   space.metrics.run_metrics_suite(...)                      │
+└─────────────────────────────────────────────────────────────┘
 
-┌──────────────────────────────────────────────────────────────┐
-│                         data/                                │
-│   Simulation CSV datasets  →  Standalone plot scripts        │
-│   (DLR, TKMS)                                                │
-└──────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                         data/                               │
+│   Simulation CSV datasets  →  Standalone plot scripts       │
+│   (DLR, TKMS)                                               │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 The typical evaluation workflow is:
